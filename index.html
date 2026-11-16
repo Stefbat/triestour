@@ -266,7 +266,7 @@ const EMAIL = "stefbattistin@gmail.com"; // your real email
 // 3) PAYMENT & REFUND TEXT shown on the Contact page (edit freely)
 const DEPOSIT = 30;   // euro deposit to lock a seat
 const PRICE = 99;
-const REFUND_TEXT = "Free cancellation up to 72 hours before the tour, deposit refunded in full. After that the deposit is kept, or moved to another date if we can fill your seat.";
+const REFUND_TEXT = "Free cancellation up to 48 hours before the tour, deposit refunded in full. After that the deposit is kept, or moved to another date if we can fill your seat.";
 const SEND_VIA = "whatsapp";
 const FORM_ENDPOINT = "https://formspree.io/f/xyeeaway";        // e.g. "https://formspree.io/f/abcdwxyz" (free account at formspree.io)
 
@@ -304,7 +304,7 @@ go(START);
 document.getElementById("waLink").href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hello Triestour! I’d like to know more about the 1-day minivan tour.");
 document.getElementById("mailLink").href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Triestour 1-day tour");
 
-document.getElementById("policy").textContent = "Price €"+PRICE+" per person. Lock your seat with a €"+DEPOSIT+" deposit; the remaining €"+(PRICE-DEPOSIT)+" is paid in cash or by transfer before or on the day. "+REFUND_TEXT;
+document.getElementById("policy").textContent = "Price €"+PRICE+" per person. "+REFUND_TEXT;
 var form = document.getElementById("leadForm"), msg = document.getElementById("msg");
 form.addEventListener("submit", function(e){
   e.preventDefault();
